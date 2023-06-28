@@ -1,0 +1,41 @@
+roles {
+    admin,
+    teacher,
+    student
+}
+
+subjects : {
+    title: string,
+    desc: string
+}
+
+teachers : {
+    subject: objid,
+    login: string,
+    password: string,
+    fullname: string,
+    phone: string
+    role: string
+}
+
+students: {
+    login: string,
+    role: string
+    password: string,
+    fullname: string,
+    phone: string,
+    scores: [
+        {
+            date: string,
+            time: string,
+            score: '20/15'
+        }
+    ]
+}
+
+tests : {
+    question: string,
+    subject: objid,
+    answers: string,
+    choose: ["variant1","variant2","variant3"]
+}
